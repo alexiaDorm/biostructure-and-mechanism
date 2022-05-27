@@ -1,6 +1,5 @@
 #Load proper amber tools
-module unload amber/12
-module load amber/11
+module load amber
 
 #Generate .mol2 and .frcmod files for the ligand
 antechamber -fi pdb -fo mol2 -i inhibitor.pdb -o inhibitor.mol2 -c bcc -nc 0 -m 1
