@@ -19,9 +19,9 @@ addions2 complex Na+ 0 #charge complex < 0
 solvatebox complex TIP3PBOX 12.0
 setBox complex centers
 
-#Add 150mmol/L of NaCl, Need to compute X using size of box
-addions2 complex Na+ X
-addions2 complex Cl- X
+#Add 150mmol/L of NaCl
+addions2 complex Na+ 23
+addions2 complex Cl- 23
 
 #Save topology and coordinates files of system
 saveamberparm complex complex.prmtop complex.inpcrd
