@@ -1,0 +1,42 @@
+Check global input consistency...
+Done.
+- Finished with read_parameters.
+  Reading topology file: /home/charmm-gui/local/GalaxyFill/data/topology_charmm22ph.in
+  Reading topology file: /home/charmm-gui/local/GalaxyFill/data/topology_charmm22ph_nt.in
+  Reading topology file: /home/charmm-gui/local/GalaxyFill/data/topology_charmm22ph_ct.in
+- Finished with read_topology_geo.
+  Reading topology file: /home/charmm-gui/local/GalaxyFill/data/topology_eng_charmm22ph.in
+  Num_ref_res =    77
+- Finished with read_topology_eng.
+- Rotamer setup
+  Reading rotamer library file  /home/charmm-gui/local/GalaxyFill/data/bbdep02.May.sortlib
+  Total number of rotamers in rot lib file      466829
+  Reading infile_chi_def file  /home/charmm-gui/local/GalaxyFill/data/def_chi.in
+  Random seed =   12980772
+Task: local_optimize
+ - local_optimize_relax: no
+ - local_optimize_sidechain: no
+============================================================
+  Reading sequence from pdb file: 6oim_proa.orig_init.pdb
+    There seems to be break in chain.   13 A ASP    14 A GLY  C-N bond length is     2.950
+  Reading pdb file: 6oim_proa.orig_init.pdb
+- Add missing atoms activated.
+  Number of added heavy atoms =     0
+  Total number of added atoms =     0
+  n_unplaced =     0
+- Fix type "all" activated: All atoms except ULR/USC are fixed.
+- Energy: MM energy activated.
+- Add missing atoms activated.
+  Number of added heavy atoms =     0
+  Total number of added atoms =     0
+  n_unplaced =     0
+Before optimization, 6oim_proa.orig_init.pdb ENERGY.0       6666.831
+Before optimization, 6oim_proa.orig_init.pdb ENERGY.1       6666.831        0.000        0.000
+Before optimization, 6oim_proa.orig_init.pdb ENERGY.2.0    970.496    563.848    164.346    128.123   4840.019      0.000      0.000      0.000      0.000      0.000      0.000      0.000      0.000      0.000      0.000      0.000      0.000      0.000      0.000      0.000
+After  optimization, 6oim_proa.orig_init.pdb ENERGY.0        -16.843
+After  optimization, 6oim_proa.orig_init.pdb ENERGY.1        -16.843        0.000        0.000
+After  optimization, 6oim_proa.orig_init.pdb ENERGY.2.0      7.346     26.039     42.356      3.496    -96.080      0.000      0.000      0.000      0.000      0.000      0.000      0.000      0.000      0.000      0.000      0.000      0.000      0.000      0.000      0.000
+------------------------------------------------------------
+Total User Time =      5.619 sec
+           0 dy  0 hr  0 min  5.619 sec
+------------------------------------------------------------
