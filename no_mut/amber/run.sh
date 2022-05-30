@@ -40,7 +40,6 @@ while ( ${cnt} <= ${cntmax} )
     @ pcnt = ${cnt} - 1
     set istep = ${prod_step}_${cnt}
     set pstep = ${prod_step}_${pcnt}
-    if ( ${cnt} == 1 ) set pstep = ${equi_prefix}
 
     ${amber} -O -i ${prod_prefix}.mdin -p ${init}.parm7 -c ${pstep}.rst7 -o ${istep}.mdout -r ${istep}.rst7 -inf ${istep}.mdinfo -x ${istep}.nc
     @ cnt += 1
