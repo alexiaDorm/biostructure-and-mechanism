@@ -29,7 +29,6 @@ ${amber} -O -i ${mini_prefix}.mdin -p ${init}.parm7 -c ${init}.rst7 -o ${mini_pr
 
 
 # Equilibration
-if (-e "dihe.restraint") sed -e "s/FC/1.0/g" dihe.restraint > ${equi_prefix}.rest
 ${amber} -O -i ${equi_prefix}.mdin -p ${init}.parm7 -c ${mini_prefix}.rst7 -o ${equi_prefix}.mdout -r ${equi_prefix}.rst7 -inf ${equi_prefix}.mdinfo -ref ${init}.rst7 -x ${equi_prefix}.nc
 
 
