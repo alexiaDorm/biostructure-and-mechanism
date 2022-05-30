@@ -25,7 +25,6 @@ set prod_step   = step5
 # Minimization
 # In the case that there is a problem during minimization using a pmemd.cuda, please try to use pmemd only for
 # the minimization step.
-if (-e "dihe.restraint") sed -e "s/FC/1.0/g" dihe.restraint > ${mini_prefix}.rest
 ${amber} -O -i ${mini_prefix}.mdin -p ${init}.parm7 -c ${init}.rst7 -o ${mini_prefix}.mdout -r ${mini_prefix}.rst7 -inf ${mini_prefix}.mdinfo -ref ${init}.rst7
 
 
