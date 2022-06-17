@@ -33,7 +33,7 @@ set prod_step   = step5
 
 
 # Production
-pmemd -O -i step5_production.mdin -p $step3_input.parm7 -c step5_1.rst7 -o step5_2.mdout -r step5_2.rst7 -inf step5_2.mdinfo -x step5_2.nc
+pmemd -O -i step5_production.mdin -p $step3_input.parm7 -c step4.1_equilibration.rst7 -o step5_2.mdout -r step5_2.rst7 -inf step5_2.mdinfo -x step5_2.nc
 
 
 
