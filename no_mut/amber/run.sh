@@ -25,7 +25,7 @@ set prod_step   = step5
 # Minimization
 # In the case that there is a problem during minimization using a pmemd.cuda, please try to use pmemd only for
 # the minimization step.
-mpirun -np 1 $AMBERHOME/bin/pmemd.MPI -O -i ${mini_prefix}.mdin -p ${init}.parm7 -c ${init}.rst7 -o ${mini_prefix}.mdout -r ${mini_prefix}.rst7 -inf ${mini_prefix}.mdinfo -ref ${init}.rst7
+pmemd -O -i ${mini_prefix}.mdin -p ${init}.parm7 -c ${init}.rst7 -o ${mini_prefix}.mdout -r ${mini_prefix}.rst7 -inf ${mini_prefix}.mdinfo -ref ${init}.rst7
 
 
 # Equilibration
