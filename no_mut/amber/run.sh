@@ -25,7 +25,7 @@ set prod_step   = step5
 # Minimization
 # In the case that there is a problem during minimization using a pmemd.cuda, please try to use pmemd only for
 # the minimization step.
-pmemd -O -i ${mini_prefix}.mdin -p ${init}.parm7 -c ${init}.rst7 -o ${mini_prefix}.mdout -r ${mini_prefix}.rst7 -inf ${mini_prefix}.mdinfo -ref ${init}.rst7
+pmemd -O -i step4.0_minimization.mdin -p step3_input.parm7 -c step3_input.rst7 -o step4.0_minimization.mdout -r step4.0_minimization.rst7 -inf step4.0_minimization.mdinfo -ref step3_input.rst7
 
 
 # Equilibration
