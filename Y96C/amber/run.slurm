@@ -8,7 +8,7 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=1
 #SBATCH --time=3-0
-#SBATCH --chdir /scratch/dormann/biostructure-and-mechanism/no_mut/amber
+#SBATCH --chdir /scratch/dormann/biostructure-and-mechanism/Y96C/amber
 #SBATCH --mem 64G
 #SBATCH --mail-type=END
 #SBATCH --mail-user=alexia.dormann@epfl.ch
