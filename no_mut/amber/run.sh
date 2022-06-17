@@ -14,7 +14,7 @@
 # inputs.
 
 #set amber = pmemd
-set amber = "mpirun -np 12 $AMBERHOME/bin/pmemd.MPI"
+set amber = "mpirun -np 1 $AMBERHOME/bin/pmemd.MPI"
 
 set init = step3_input
 set mini_prefix = step4.0_minimization
@@ -25,7 +25,7 @@ set prod_step   = step5
 # Minimization
 # In the case that there is a problem during minimization using a pmemd.cuda, please try to use pmemd only for
 # the minimization step.
-mpirun -np 12 $AMBERHOME/bin/pmemd.MPI -O -i ${mini_prefix}.mdin -p ${init}.parm7 -c ${init}.rst7 -o ${mini_prefix}.mdout -r ${mini_prefix}.rst7 -inf ${mini_prefix}.mdinfo -ref ${init}.rst7
+mpirun -np 1 $AMBERHOME/bin/pmemd.MPI -O -i ${mini_prefix}.mdin -p ${init}.parm7 -c ${init}.rst7 -o ${mini_prefix}.mdout -r ${mini_prefix}.rst7 -inf ${mini_prefix}.mdinfo -ref ${init}.rst7
 
 
 # Equilibration
