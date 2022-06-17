@@ -25,11 +25,11 @@ set prod_step   = step5
 # Minimization
 # In the case that there is a problem during minimization using a pmemd.cuda, please try to use pmemd only for
 # the minimization step.
-pmemd -O -i step4.0_minimization.mdin -p step3_input.parm7 -c step3_input.rst7 -o step4.0_minimization.mdout -r step4.0_minimization.rst7 -inf step4.0_minimization.mdinfo -ref step3_input.rst7
+pmemd.MPI -O -i step4.0_minimization.mdin -p step3_input.parm7 -c step3_input.rst7 -o step4.0_minimization.mdout -r step4.0_minimization.rst7 -inf step4.0_minimization.mdinfo -ref step3_input.rst7
 
 
 # Equilibration
-#${amber} -O -i ${equi_prefix}.mdin -p ${init}.parm7 -c ${mini_prefix}.rst7 -o ${equi_prefix}.mdout -r ${equi_prefix}.rst7 -inf ${equi_prefix}.mdinfo -ref ${init}.rst7 -x ${equi_prefix}.nc
+pmemd.MPI -O -i step4.1_equilibration.mdin -p step3_input.parm7 -c step3_input.rst7 -o step4.1_equilibration.mdout -r step4.1_equilibration.rst7 -inf step4.1_equilibration.mdinfo -ref step3_input.rst7 -x step4.1_equilibration.nc
 
 
 # Production
