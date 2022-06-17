@@ -1,8 +1,8 @@
 #!/bin/bash -l
 
-#SBATCH --job-name="G12C"
-#SBATCH --error="G12C.err"
-#SBATCH --output="G12C.out"
+#SBATCH --job-name="YNN"
+#SBATCH --error="Y.err"
+#SBATCH --output="Y.out"
 #SBATCH --nodes 1
 #SBATCH --ntasks=1
 #SBATCH --ntasks-per-node=1
