@@ -29,20 +29,20 @@ ${amber} -O -i ${mini_prefix}.mdin -p ${init}.parm7 -c ${init}.rst7 -o ${mini_pr
 
 
 # Equilibration
-${amber} -O -i ${equi_prefix}.mdin -p ${init}.parm7 -c ${mini_prefix}.rst7 -o ${equi_prefix}.mdout -r ${equi_prefix}.rst7 -inf ${equi_prefix}.mdinfo -ref ${init}.rst7 -x ${equi_prefix}.nc
+#${amber} -O -i ${equi_prefix}.mdin -p ${init}.parm7 -c ${mini_prefix}.rst7 -o ${equi_prefix}.mdout -r ${equi_prefix}.rst7 -inf ${equi_prefix}.mdinfo -ref ${init}.rst7 -x ${equi_prefix}.nc
 
 
 # Production
 set cnt    = 1
 set cntmax = 10
 
-while ( ${cnt} <= ${cntmax} )
-    @ pcnt = ${cnt} - 1
-    set istep = ${prod_step}_${cnt}
-    set pstep = ${prod_step}_${pcnt}
+#while ( ${cnt} <= ${cntmax} )
+    #@ pcnt = ${cnt} - 1
+    #set istep = ${prod_step}_${cnt}
+    #set pstep = ${prod_step}_${pcnt}
 
-    ${amber} -O -i ${prod_prefix}.mdin -p ${init}.parm7 -c ${pstep}.rst7 -o ${istep}.mdout -r ${istep}.rst7 -inf ${istep}.mdinfo -x ${istep}.nc
-    @ cnt += 1
-end
+    #${amber} -O -i ${prod_prefix}.mdin -p ${init}.parm7 -c ${pstep}.rst7 -o ${istep}.mdout -r ${istep}.rst7 -inf ${istep}.mdinfo -x ${istep}.nc
+    #@ cnt += 1
+#end
 
 
