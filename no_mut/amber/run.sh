@@ -14,7 +14,7 @@
 # inputs.
 
 #set amber = pmemd
-set amber = "mpirun -np 1 $AMBERHOME/bin/pmemd.MPI"
+#set amber = "mpirun -np 1 $AMBERHOME/bin/pmemd.MPI"
 
 set init = step3_input
 set mini_prefix = step4.0_minimization
@@ -25,11 +25,11 @@ set prod_step   = step5
 # Minimization
 # In the case that there is a problem during minimization using a pmemd.cuda, please try to use pmemd only for
 # the minimization step.
-pmemd -O -i step4.0_minimization.mdin -p step3_input.parm7 -c step3_input.rst7 -o step4.0_minimization.mdout -r step4.0_minimization.rst7 -inf step4.0_minimization.mdinfo -ref step3_input.rst7
+#pmemd -O -i step4.0_minimization.mdin -p step3_input.parm7 -c step3_input.rst7 -o step4.0_minimization.mdout -r step4.0_minimization.rst7 -inf step4.0_minimization.mdinfo -ref step3_input.rst7
 
 
 # Equilibration
-pmemd.MPI -np 4 -O -i step4.1_equilibration.mdin -p step3_input.parm7 -c step3_input.rst7 -o step4.1_equilibration.mdout -r step4.1_equilibration.rst7 -inf step4.1_equilibration.mdinfo -ref step3_input.rst7 -x step4.1_equilibration.nc
+pmemd -O -i step4.1_equilibration.mdin -p step3_input.parm7 -c step3_input.rst7 -o step4.1_equilibration.mdout -r step4.1_equilibration.rst7 -inf step4.1_equilibration.mdinfo -ref step3_input.rst7 -x step4.1_equilibration.nc
 
 
 # Production
@@ -43,6 +43,5 @@ set cntmax = 10
 
     #${amber} -O -i ${prod_prefix}.mdin -p ${init}.parm7 -c ${pstep}.rst7 -o ${istep}.mdout -r ${istep}.rst7 -inf ${istep}.mdinfo -x ${istep}.nc
     #@ cnt += 1
-#end
 
 
