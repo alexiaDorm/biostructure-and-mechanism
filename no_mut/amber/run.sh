@@ -13,8 +13,8 @@
 # If you are willing to use "sander" for your simulation, please remove "&end" line in all minimization / equilibration
 # inputs.
 
-set amber = pmemd
-# set amber = "mpirun -np 4 pmemd.MPI"
+#set amber = pmemd
+set amber = "mpirun -np 12 $AMBERHOME/bin/pmemd.MPI"
 
 set init = step3_input
 set mini_prefix = step4.0_minimization
